@@ -1,3 +1,42 @@
+# FRONTEND-SUITMEDIA
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+Proyek Frontend untuk Suitmedia menggunakan **Next.js** dan **TailwindCSS**.
+
+## Deskripsi Proyek
+
+- Menggunakan Next.js App Router (React Server Components + Client Components).
+- Menggunakan TailwindCSS untuk styling.
+- Memiliki fitur header dengan navigasi yang responsif dan animasi scroll.
+- Halaman utama menampilkan banner dan daftar postingan dengan pagination, sorting, dan filter.
+- Data postingan diambil dari API backend Suitmedia.
+- Mendukung dynamic routing dan state URL (query params).
+
+## Struktur Folder Penting
+
+- src/app - Folder utama berisi halaman (pages) dan routing.
+- src/components - Komponen React yang digunakan pada halaman.
+- src/components/ui - Komponen UI seperti Select dropdown.
+- public - Folder berisi aset statis seperti gambar logo.
+
+## Cara Menjalankan
+1. Clone repository ini
+2. Masuk ke folder proyek : cd FRONTEND-SUITMEDIA
+3. Install dependencies: npm install
+4. Jalankan mode development: npm run dev
+5. Jalankan build production: npm run build
+
+## Penjelasan Komponen Utama 
+1. Header : Menampilkan navigasi utama dengan animasi saat scroll dan indikator halaman aktif
+2. Banner : Menampilkan gambar banner dengan efek parallax dan overlay warna
+3. ListPost : Menampilkan daftar postingan dari API dengan pagination, filter ukuran halamn, dan sorting
+4. Pagination : Komponen pagination untuk navigasi halaman postingan
+5. PostCard : Menampilkan kartu postingan dengan gambar, tanggal dan judul
+
+## Catatan
+Pastikan saat development dan build tidak ada error terkait penggunaan useSearchParams dan Suspense. Komponen yang memerlukan client-side rendering menggunakan "use client" directive. Untuk build di vercel, pastikan environment dan dependencies sudah sesuai
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
