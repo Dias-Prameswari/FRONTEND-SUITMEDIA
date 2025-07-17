@@ -3,10 +3,11 @@
 // - Menampilkan Header (navigasi), Banner, dan daftar postingan (ListPost)
 // - Banner bisa custom gambar, judul, dan subjudul lewat props
 // - Konten utama di <main> (daftar artikel dengan pagination/filtering)
+import { Suspense } from "react";
 import Header from "@/components/Header";
 import Banner from "@/components/Banner";
-import ListPost from "@/components/ListPost";
-import { Suspense } from "react";
+import dynamic from "next/dynamic";
+const ListPost = dynamic(() => import("@/components/ListPost"), { ssr: false });
 
 export default function Home() {
   return (

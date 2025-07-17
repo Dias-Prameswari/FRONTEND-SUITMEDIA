@@ -7,8 +7,8 @@
 // - Ada loading state dan error state jika data kosong/error
 
 "use client"; // Agar komponen bisa pakai state/effect di Next.js app router (bukan server only)
-import { useEffect, useState, useCallback } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState, useCallback } from "react";
 import PostCard from "./PostCard"; //ambil gambar dari file postcard
 import Pagination from "./Pagination"; //file untuk code page kanan kiri
 import {
