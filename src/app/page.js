@@ -3,6 +3,7 @@
 // - Menampilkan Header (navigasi), Banner, dan daftar postingan (ListPost)
 // - Banner bisa custom gambar, judul, dan subjudul lewat props
 // - Konten utama di <main> (daftar artikel dengan pagination/filtering)
+"use client";
 import { Suspense } from "react";
 import Header from "@/components/Header";
 import Banner from "@/components/Banner";
