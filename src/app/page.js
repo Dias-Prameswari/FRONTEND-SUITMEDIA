@@ -1,0 +1,30 @@
+// page (Home Page)
+// Halaman utama website ("/")
+// - Menampilkan Header (navigasi), Banner, dan daftar postingan (ListPost)
+// - Banner bisa custom gambar, judul, dan subjudul lewat props
+// - Konten utama di <main> (daftar artikel dengan pagination/filtering)
+import Header from "@/components/Header";
+import Banner from "@/components/Banner";
+import ListPost from "@/components/ListPost";
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Komponen header (navigasi paling atas) */}
+      <Header />
+
+      {/* Komponen banner besar di atas konten */}
+      <Banner
+        // gambar diambil dari web unsplash, gambarnya tentang hutan
+        imageUrl="https://images.unsplash.com/photo-1508891120639-a9e5ffa63079?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        title="Ideas"
+        subtitle="Where all our great things begin"
+      />
+
+      {/* Konten utama: daftar post */}
+      <main className="max-w-6xl mx-auto px-4 bg-white">
+        <ListPost />
+      </main>
+    </div>
+  );
+}
