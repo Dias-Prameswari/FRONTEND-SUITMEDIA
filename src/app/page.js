@@ -6,6 +6,7 @@
 import Header from "@/components/Header";
 import Banner from "@/components/Banner";
 import ListPost from "@/components/ListPost";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
@@ -23,7 +24,10 @@ export default function Home() {
 
       {/* Konten utama: daftar post */}
       <main className="max-w-6xl mx-auto px-4 bg-white">
-        <ListPost />
+        {/* Bungkus ListPost dengan Suspense */}
+        <Suspense fallback={<div>Loading post...</div>}>
+          <ListPost />
+        </Suspense>
       </main>
     </div>
   );
