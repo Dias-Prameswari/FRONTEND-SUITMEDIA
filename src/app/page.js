@@ -27,9 +27,9 @@ export default function Home() {
       {/* Konten utama: daftar post */}
       <main className="max-w-6xl mx-auto px-4 bg-white">
         {/* Bungkus ListPost dengan Suspense */}
-        <Suspense fallback={<div>Loading post...</div>}>
+        {/* <Suspense fallback={<div>Loading post...</div>}> */}
           <ListPost />
-        </Suspense>
+        {/* </Suspense> */}
       </main>
     </div>
   );
